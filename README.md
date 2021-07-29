@@ -7,8 +7,8 @@
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
 
-### Code for the manuscript
 # Patient stratification reveals the molecular basis of disease comoridities
+<a href="https://orcid.org/0000-0002-3845-5751">Beatriz Urda-García</a>, <a href="https://orcid.org/0000-0001-7959-6326">Jon Sánchez-Valle</a>, <a href="https://orcid.org/0000-0002-9481-2557">Rosalba Lepore</a>, <a href="https://orcid.org/0000-0002-8937-6789">Alfonso Valencia</a>
 
 medRxiv: <a href="https://https://doi.org/10.1101/2021.07.22.21260979">https://doi.org/10.1101/2021.07.22.21260979</a>
 

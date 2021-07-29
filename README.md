@@ -62,6 +62,7 @@ To facilitate the visualization and exploration of the generated networks, we im
 
 ### Github
 rgenexcom has its own Github repository, where all the code is accessible. 
+
 Link: <a href="https://github.com/bsc-life/rgenexcom">https://github.com/bsc-life/rgenexcom</a>.
 
 

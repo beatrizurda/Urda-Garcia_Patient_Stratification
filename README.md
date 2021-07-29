@@ -27,6 +27,7 @@ medRxiv: <a href="https://https://doi.org/10.1101/2021.07.22.21260979">https://d
     <li>
       <a href="#manuscript">Manuscript</a>
     </li>
+    <li><a href="#frequently-used-terms">Frequently used terms</a></li>
     <li>
       <a href="#web-application">Web Application</a>
     </li>
@@ -48,7 +49,10 @@ Here we develop a new approach to generate a disease network that uses the accum
 
 These results solidly support the existence of molecular mechanisms behind many of the known comorbidities. All the information can be explored on a large scale and in detail at <a href="http://disease-perception.bsc.es/rgenexcom/">http://disease-perception.bsc.es/rgenexcom/</a>.
 
-
+## Frequently used terms
+- Disease Similarity Network (DSN): disease-disease network. Two diseases are connected if their gene expression profiles correlate significantly (positively or negatively)
+- Meta-patients: groups of patients from a given disease with a similar gene expression profile. 
+- Stratified Similarity Network (SSN): extension of the DSN network thar includes the meta-patients. Hence, the SSN contains three types of links: (1) links between diseases, (2) links between diseases and meta-patients and (3) links between meta-patients. 
 
 <!-- WEB APPLICATION -->
 ## Web Application: rgenexcom

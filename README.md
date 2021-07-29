@@ -65,9 +65,9 @@ rgenexcom has its own Github repository, where all the code is accessible.
 Link: <a href="https://github.com/bsc-life/rgenexcom">https://github.com/bsc-life/rgenexcom</a>.
 
 ## Frequently used terms
-- Disease Similarity Network (DSN): disease-disease network. Two diseases are connected if their gene expression profiles correlate significantly (positively or negatively)
-- Meta-patients: groups of patients from a given disease with a similar gene expression profile. 
-- Stratified Similarity Network (SSN): extension of the DSN network thar includes the meta-patients. Hence, the SSN contains three types of links: 
+- **Disease Similarity Network (DSN):** disease-disease network. Two diseases are connected if their gene expression profiles correlate significantly (positively or negatively).
+- **Meta-patients:** groups of patients from a given disease with a similar gene expression profile. 
+- **Stratified Similarity Network (SSN):** extension of the DSN network thar includes the meta-patients. Hence, the SSN contains three types of links: 
       (1) links between diseases
       (2) links between diseases and meta-patients
       (3) links between meta-patients.

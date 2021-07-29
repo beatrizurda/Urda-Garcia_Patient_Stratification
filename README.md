@@ -69,4 +69,57 @@ Link: <a href="https://github.com/bsc-life/rgenexcom">https://github.com/bsc-lif
 <!-- CODE -->
 ## Code
 
+### Data Preparation
+First, uniformly processed gene counts were dowloaded from the <a href="http://www.ilincs.org/apps/grein/">GREIN platform</a> and Summarized Emperiment Objects (SE) from Bioconductor were constructed for each study. Finally, SE objects corresponding to the same disease where merged (merge_same_disease_se_objects.R).
+
+### RNA-seq pipeline
+Then, we applied an RNA-seq pipeline to each disease separately and in parallel (run_rnaseq_pipeline_for_disease.R)
+
+### DSN generation
+1. First, we computed distances between diseases (build_disease_level_network.py)
+2. We used the generated distances to obtain the Disease Similarity Network (DSN) (generating_networks.R)
+
+### DSN overlap
+1. Obtain the SE object for each icd9 (generating_SE_objects_icd9_level.R)
+2. Run the RNA-seq pipeline at the icd9 level (run_rnaseq_pipeline_for_disease.R)
+3. Compute distances between diseases (build_ICD_level_network.R)
+4. Use the obtained distances to generate the ICD9 level DSN network (generating_networks.R)
+5. Compute the overlap with the epidemiological network from Hidalgo et al. (network_overlap_icd.R)
+
+In the alternative approach, we computed the overlap of the DSN with the epidemiological network from Hidalgo et al. (network_overlap.R) directly from the DSN (by transforming the disease names into ICD9 codes)
+
+### DSN analysis and comparison with other molecular networks
+1. Topological analysis of the networks and how they compare to the epidemiological network (analyzing_networks.R)
+2. Overlap of other molecular networks with the epidemiological network from Hidalgo et al. (Other_molecular_networks/other_networks_overlap.R)
+3. Comparison of the PPI network with the DSN (Other_molecular_networks/comparison_with_ppi.R)
+4. Comparison of the microarrays network with the DSN (Overlap_microarrays.R)
+
+### Molecular mechanisms behind comorbidities
+Inspecting the molecular mechanisms behind comorbidities (exploring_underlying_molecular_mechanisms.py and pathways_count_plots.R)
+
+### Meta-patient definition and characterization. 
+1. We used PAM and WARD algorithms to define meta-patients for each disease (groups of patients with a similar expression profile) (defining_meta_patients.R)
+2. Then, we applied the RNA-seq pipeline for each meta-patient (DEanalysis_for_metapatients.R)
+
+### SSN generation, analysis and overlap computation
+1. First, we computed distances between diseases (build_metapatient_disease_network.py)
+2. We used the generated distances to obtain the Disease Similarity Network (DSN) (generating_networks.R)
+3. We computed the overlap of the DSN with the epidemiological network from Hidalgo et al. (network_overlap_SSN.R)
+4. Topological analysis of the DSN (analyzing_networks.R)
+
+### Meta-patients increase the detection power
+Randomizations were performed to check the significance of the increase in the detection power achieved with the definition of meta-patients (obtaining_random_meta_patients.R, DEA_random_metapatients.R, Randomization/obtain_pvalues_increased_power_metapatients.R)
+
+
+
+
+
+
+
+
+
+
+
+
+
 

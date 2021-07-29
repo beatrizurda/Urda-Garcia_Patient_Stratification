@@ -66,7 +66,8 @@ rgenexcom has its own Github repository, where all the code is accessible.
 
 Link: <a href="https://github.com/bsc-life/rgenexcom">https://github.com/bsc-life/rgenexcom</a>.
 
-![Uploading Captura de pantalla 2021-07-29 a las 17.20.21.png]()
+![Captura de pantalla 2021-07-29 a las 17 20 21](https://user-images.githubusercontent.com/46993728/127519898-c808ac1c-34f7-4f2c-b266-3fdd1f5853cb.png)
+
 
 ## Frequently used terms
 - **Disease Similarity Network (DSN):** disease-disease network. Two diseases are connected if their gene expression profiles correlate significantly (positively or negatively).

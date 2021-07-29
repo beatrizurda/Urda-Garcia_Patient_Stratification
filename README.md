@@ -76,7 +76,7 @@ Link: <a href="https://github.com/bsc-life/rgenexcom">https://github.com/bsc-lif
 ## Code
 
 ### Data Preparation
-First, uniformly processed gene counts were dowloaded from the <a href="http://www.ilincs.org/apps/grein/">GREIN platform</a> and Summarized Emperiment Objects (SE) from Bioconductor were constructed for each study. Finally, SE objects corresponding to the same disease where merged (merge_same_disease_se_objects.R).
+First, uniformly processed gene counts were dowloaded from the <a href="http://www.ilincs.org/apps/grein/">GREIN platform</a> and Summarized Emperiment Objects (SE) from Bioconductor were constructed for each study. Finally, SE objects corresponding to the same disease where merged (<code>merge_same_disease_se_objects.R</code>).
 
 ### RNA-seq pipeline
 Then, we applied an RNA-seq pipeline to each disease separately and in parallel (run_rnaseq_pipeline_for_disease.R). Then, we clustered diseases based on their significantly dysregulated pathways (molecular_insight_heatmap.R).

@@ -116,7 +116,7 @@ Inspecting the molecular mechanisms behind comorbidities (<code>exploring_underl
 1. First, we computed distances between diseases (<code>Network_building/build_metapatient_disease_network.py</code>)
 2. We used the generated distances to obtain the Disease Similarity Network (DSN) (<code>generating_networks.R</code>)
 3. We computed the overlap of the DSN with the epidemiological network from Hidalgo et al. (<code>network_overlap_SSN.R</code>)
-4. Topological analysis of the DSN (<code>analyzing_networks.R</code>)
+4. Topological analysis of the SSN (<code>analyzing_networks.R</code>)
 
 ### Meta-patients increase the detection power
 Randomizations were performed to check the significance of the increase in the detection power achieved with the definition of meta-patients (N=1000). 

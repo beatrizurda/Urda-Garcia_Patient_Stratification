@@ -36,50 +36,30 @@ medRxiv: <a href="https://https://doi.org/10.1101/2021.07.22.21260979">https://d
 
 
 
-<!-- ABOUT THE PROJECT -->
+<!-- MANUSCRIPT INFORMATION -->
 ## Manuscript
 
-Study of origin: <a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE66117">GSE66117</a>
+Preprint available in medRxiv at <a href="https://https://doi.org/10.1101/2021.07.22.21260979">https://doi.org/10.1101/2021.07.22.21260979</a>
 
-- Number of cases: 43
-- Number of controls: 3
-- Tissue: Blood
+### Abstract
+Epidemiological evidence shows that some diseases tend to co-occur; more exactly, certain groups of patients with a given disease are at a higher risk of developing a specific secondary condition. Despite the considerable interest, only a small number of connections between comorbidities and molecular processes have been identified.
 
-Raw counts where downloaded from <a href="http://www.ilincs.org/apps/grein/">GREIN</a>
+Here we develop a new approach to generate a disease network that uses the accumulating RNA-seq data on human diseases to significantly match a large number of known comorbidities, providing plausible biological models for such co-occurrences. Furthermore, 64% of the known disease pairs can be explained by analysing groups of patients with similar expression profiles, highlighting the importance of patient stratification in the study of comorbidities.
+
+These results solidly support the existence of molecular mechanisms behind many of the known comorbidities. All the information can be explored on a large scale and in detail at <a href="http://disease-perception.bsc.es/rgenexcom/">http://disease-perception.bsc.es/rgenexcom/</a>.
 
 
 
-<!-- GETTING STARTED -->
+<!-- WEB APPLICATION -->
 ## Web Application
 
-### Methods
+####rgenexcom (RNA-seq Gene Expression Comorbidities)
 
-First, samples with a percentage of aligned reads to the genome lower than 70% were removed, as well as studies with less than 3 cases (from now on patients) and control samples meeting the mentioned requirement. Secondly, and in order to perform the analysis at the disease level, gene counts and metadata for each disease were integrated (only studies with the disease, tissue and disease state information were considered). We performed quality controls using the edgeR pipeline (Robinson et al., 2009) and we applied within-sample normalization by considering the logarithm of the counts-per-million (log2CPM). Afterwards, we filtered out lowly expressed genes (those with less than 1 log2CPM in more than 20% of the samples) and we applied between-sample normalization using the trimmed mean of M values (TMM) method (Robinson and Oshlack, 2010). After performing batch effect identification, we used the limma pipeline (Ritchie et al., 2015) for differential expression analysis. Specifically, we built a model considering sample type (case vs. control) as our outcome of interest and adjusting for the study effect, as it is the most descriptive independent variable (tissue, platform and others depend on the study of origin). Genes with an FDR <=0.05 were considered significantly differentially expressed genes (sDEGs). Moreover, we used Combat (Johnson et al., 2007) and QR Decomposition (Ritchie et al., 2015) batch effect removal methods to check the clustering of the samples with t-Distributed Stochastic Neighbor embedding (tSNEs) (Van Der Maaten and Hinton, 2008).
+### Description
+To facilitate the visualization and exploration of the generated networks, we implemented a web application that displays the Disease Similarity Network (DSN) and the Stratified Similarity Network (SSN) in a dynamic manner. The user can filter the networks by the type of interactions (positive or negative) and by selecting a minimum and maximum threshold for the edge’s weight. Community detection algorithms (greedy modularity optimization or random walks can be applied to the filtered network and interactions involving specific nodes can be filtered and highlighted. Furthermore, the molecular mechanisms behind diseases and disease interactions can be easily inspected and compared.
 
-### Results
 
-File:  ChronicLymphocyticLeukemia_DEGs.txt 
-
-Columns of interest:
-- symbol: gene symbol 
-- logFC: logFC of the mean expression in cases versus controls
-- adj.P.Val: adjusted p-value
-
-Genes with and adjusted p-value <0.05 can be considered significantly Differentially Expressed Genes (sDEGs).
-
-Genes with a logFC > 1 are more expressed in the cases than in the controls (overexpressed) whereas genes with a logFC<1 are less expressed in the cases than in the controls (underexpressed). 
-
+<!-- CODE -->
 ## Code
 
-### Methods
 
-To measure gene expression variability - the dispersion of expression of a given gene in a single condition- we used the Distance to Median (DM) (Newman et al., 2006). Since we wanted to capture the changes of gene expression variability associated with diseases (comparing patients vs. controls) and DM takes values in ℝ (including zero), we defined the differential variability value for each gene and disease as the ∆DM; that is, the difference between the DM of the patients and the DM of the controls. We used randomizations to establish the significance of the differential variability between patients and controls for each gene in a given disease. For each disease, we generated a ΔDM null model by sampling with replacement 100000 times patients and controls from the entire set of samples (maintaining the number of patients and controls respectively) and computing the ΔDM value for each gene. We computed the p-values by comparing the observed ΔDM of each gene with the null model. After correcting for multiple testing (FDR <= 0.05), we obtained the significantly Differentially Variable Genes (sDVGs).
-
-### Results
-
-File:  ChronicLymphocyticLeukemia_DVGs.txt 
-
-Columns of interest:
-- rn: gene symbol 
-- dm_dif: delta DM (ΔDM)
-- FDR_corrected: adjusted p-value

@@ -51,9 +51,9 @@ These results solidly support the existence of molecular mechanisms behind many 
 
 
 <!-- WEB APPLICATION -->
-## Web Application
+## Web Application: rgenexcom
 
-####rgenexcom (RNA-seq Gene Expression Comorbidities)
+#### rgenexcom (RNA-seq Gene Expression Comorbidities)
 
 ### Description
 To facilitate the visualization and exploration of the generated networks, we implemented a web application that displays the Disease Similarity Network (DSN) and the Stratified Similarity Network (SSN) in a dynamic manner. The user can filter the networks by the type of interactions (positive or negative) and by selecting a minimum and maximum threshold for the edge’s weight. Community detection algorithms (greedy modularity optimization or random walks can be applied to the filtered network and interactions involving specific nodes can be filtered and highlighted. Furthermore, the molecular mechanisms behind diseases and disease interactions can be easily inspected and compared.

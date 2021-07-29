@@ -79,43 +79,43 @@ Link: <a href="https://github.com/bsc-life/rgenexcom">https://github.com/bsc-lif
 First, uniformly processed gene counts were dowloaded from the <a href="http://www.ilincs.org/apps/grein/">GREIN platform</a> and Summarized Emperiment Objects (SE) from Bioconductor were constructed for each study. Finally, SE objects corresponding to the same disease where merged (<code>merge_same_disease_se_objects.R</code>).
 
 ### RNA-seq pipeline
-Then, we applied an RNA-seq pipeline to each disease separately and in parallel (run_rnaseq_pipeline_for_disease.R). Then, we clustered diseases based on their significantly dysregulated pathways (molecular_insight_heatmap.R).
+Then, we applied an RNA-seq pipeline to each disease separately and in parallel (run_rnaseq_pipeline_for_disease.R). Then, we clustered diseases based on their significantly dysregulated pathways (<code>molecular_insight_heatmap.R</code>).
 
 ### DSN generation
-1. First, we computed distances between diseases (Network_building/build_disease_level_network.py)
-2. We used the generated distances to obtain the Disease Similarity Network (DSN) (generating_networks.R)
+1. First, we computed distances between diseases (<code>Network_building/build_disease_level_network.py</code>)
+2. We used the generated distances to obtain the Disease Similarity Network (DSN) (<code>generating_networks.R</code>)
 
 ### DSN overlap
-1. Obtain the SE object for each icd9 (generating_SE_objects_icd9_level.R)
-2. Run the RNA-seq pipeline at the icd9 level (run_rnaseq_pipeline_for_disease.R)
-3. Compute distances between diseases (build_ICD_level_network.R)
-4. Use the obtained distances to generate the ICD9 level DSN network (generating_networks.R)
-5. Compute the overlap with the epidemiological network from Hidalgo et al. (network_overlap_icd.R)
+1. Obtain the SE object for each icd9 (<code>generating_SE_objects_icd9_level.R</code>)
+2. Run the RNA-seq pipeline at the icd9 level (<code>run_rnaseq_pipeline_for_disease.R</code>)
+3. Compute distances between diseases (<code>build_ICD_level_network.R</code>)
+4. Use the obtained distances to generate the ICD9 level DSN network (<code>generating_networks.R</code>)
+5. Compute the overlap with the epidemiological network from Hidalgo et al. (<code>network_overlap_icd.R</code>)
 
-In the alternative approach, we computed the overlap of the DSN with the epidemiological network from Hidalgo et al. (network_overlap.R) directly from the DSN (by transforming the disease names into ICD9 codes)
+In the alternative approach, we computed the overlap of the DSN with the epidemiological network from Hidalgo et al. (<code>network_overlap.R</code>) directly from the DSN (by transforming the disease names into ICD9 codes)
 
 ### DSN analysis and comparison with other molecular networks
-1. Topological analysis of the networks and how they compare to the epidemiological network (analyzing_networks.R)
-2. Overlap of other molecular networks with the epidemiological network from Hidalgo et al. (Other_molecular_networks/other_networks_overlap.R)
-3. Generating the barplot with the overlaps of the DSN and other molecular networks (barplot_overlap_molecular_networks.R)
-4. Comparison of the PPI network with the DSN (Other_molecular_networks/comparison_with_ppi.R)
-5. Comparison of the microarrays network with the DSN (Overlap_microarrays.R)
+1. Topological analysis of the networks and how they compare to the epidemiological network (<code>analyzing_networks.R</code>)
+2. Overlap of other molecular networks with the epidemiological network from Hidalgo et al. (<code>Other_molecular_networks/other_networks_overlap.R</code>)
+3. Generating the barplot with the overlaps of the DSN and other molecular networks (<code>barplot_overlap_molecular_networks.R</code>)
+4. Comparison of the PPI network with the DSN (<code>Other_molecular_networks/comparison_with_ppi.R</code>)
+5. Comparison of the microarrays network with the DSN (<code>Overlap_microarrays.R</code>)
 
 ### Molecular mechanisms behind comorbidities
-Inspecting the molecular mechanisms behind comorbidities (exploring_underlying_molecular_mechanisms.py and pathways_count_plots.R)
+Inspecting the molecular mechanisms behind comorbidities (<code>exploring_underlying_molecular_mechanisms.py</code> and <code>pathways_count_plots.R</code>)
 
 ### Meta-patient definition and characterization. 
-1. We used PAM and WARD algorithms to define meta-patients for each disease (groups of patients with a similar expression profile) (defining_meta_patients.R)
-2. Then, we applied the RNA-seq pipeline for each meta-patient (DEanalysis_for_metapatients.R)
+1. We used PAM and WARD algorithms to define meta-patients for each disease (groups of patients with a similar expression profile) (<code>defining_meta_patients.R</code>)
+2. Then, we applied the RNA-seq pipeline for each meta-patient (<code>DEanalysis_for_metapatients.R</code>)
 
 ### SSN generation, analysis and overlap computation
-1. First, we computed distances between diseases (Network_building/build_metapatient_disease_network.py)
-2. We used the generated distances to obtain the Disease Similarity Network (DSN) (generating_networks.R)
-3. We computed the overlap of the DSN with the epidemiological network from Hidalgo et al. (network_overlap_SSN.R)
-4. Topological analysis of the DSN (analyzing_networks.R)
+1. First, we computed distances between diseases (<code>Network_building/build_metapatient_disease_network.py</code>)
+2. We used the generated distances to obtain the Disease Similarity Network (DSN) (<code>generating_networks.R</code>)
+3. We computed the overlap of the DSN with the epidemiological network from Hidalgo et al. (<code>network_overlap_SSN.R</code>)
+4. Topological analysis of the DSN (<code>analyzing_networks.R</code>)
 
 ### Meta-patients increase the detection power
-Randomizations were performed to check the significance of the increase in the detection power achieved with the definition of meta-patients (obtaining_random_meta_patients.R, DEA_random_metapatients.R, Network_building/build_metapatient_dis_network_randomization.py, Randomization/obtain_pvalues_increased_power_metapatients.R)
+Randomizations were performed to check the significance of the increase in the detection power achieved with the definition of meta-patients (<code>obtaining_random_meta_patients.R</code>, <code>DEA_random_metapatients.R</code>, <code>Network_building/build_metapatient_dis_network_randomization.py</code>, <code>Randomization/obtain_pvalues_increased_power_metapatients.R</code>)
 
 
 

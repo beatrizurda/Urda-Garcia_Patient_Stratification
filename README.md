@@ -119,8 +119,12 @@ Inspecting the molecular mechanisms behind comorbidities (<code>exploring_underl
 4. Topological analysis of the DSN (<code>analyzing_networks.R</code>)
 
 ### Meta-patients increase the detection power
-Randomizations were performed to check the significance of the increase in the detection power achieved with the definition of meta-patients (<code>obtaining_random_meta_patients.R</code>, <code>DEA_random_metapatients.R</code>, <code>Network_building/build_metapatient_dis_network_randomization.py</code>, <code>Randomization/obtain_pvalues_increased_power_metapatients.R</code>)
-
+Randomizations were performed to check the significance of the increase in the detection power achieved with the definition of meta-patients (N=1000). 
+Steps:
+1. For each disease, create 1000 random meta-patients maintaining the number of size of the meta-patients for each disease (<code>obtaining_random_meta_patients.R</code>)
+2. Run the RNA-seq pipeline for each meta-patient (<code>DEA_random_metapatients.R</code>)
+3. Build 1000 networks with the random meta-patients (<code>Network_building/build_metapatient_dis_network_randomization.py</code>)
+4. Use the generated networks to establish the significance of the increased in detection power observed with the original meta-patients (<code>Randomization/obtain_pvalues_increased_power_metapatients.R</code>)
 
 
 

@@ -16,7 +16,7 @@ Beatriz Urda-García<a href="https://orcid.org/0000-0002-3845-5751">
 <img alt="ORCID logo" src="https://info.orcid.org/wp-content/uploads/2019/11/orcid_16x16.png" width="16" height="16" />
 </a>, Alfonso Valencia<a href="https://orcid.org/0000-0002-8937-6789">
 <img alt="ORCID logo" src="https://info.orcid.org/wp-content/uploads/2019/11/orcid_16x16.png" width="16" height="16" />
-</a>,
+</a>
 
 medRxiv: <a href="https://https://doi.org/10.1101/2021.07.22.21260979">https://doi.org/10.1101/2021.07.22.21260979</a>
 

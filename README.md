@@ -53,7 +53,8 @@ These results solidly support the existence of molecular mechanisms behind many 
 <!-- WEB APPLICATION -->
 ## Web Application: rgenexcom
 
-#### rgenexcom (RNA-seq Gene Expression Comorbidities) at <a href="http://disease-perception.bsc.es/rgenexcom/">http://disease-perception.bsc.es/rgenexcom/</a>.
+#### rgenexcom (RNA-seq Gene Expression Comorbidities)
+Link: <a href="http://disease-perception.bsc.es/rgenexcom/">http://disease-perception.bsc.es/rgenexcom/</a>.
 
 
 ### Description

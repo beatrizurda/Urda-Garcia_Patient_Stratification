@@ -37,6 +37,7 @@ medRxiv: <a href="https://https://doi.org/10.1101/2021.07.22.21260979">https://d
 
 
 
+
 <!-- MANUSCRIPT INFORMATION -->
 ## Manuscript
 
@@ -48,6 +49,7 @@ Epidemiological evidence shows that some diseases tend to co-occur; more exactly
 Here we develop a new approach to generate a disease network that uses the accumulating RNA-seq data on human diseases to significantly match a large number of known comorbidities, providing plausible biological models for such co-occurrences. Furthermore, 64% of the known disease pairs can be explained by analysing groups of patients with similar expression profiles, highlighting the importance of patient stratification in the study of comorbidities.
 
 These results solidly support the existence of molecular mechanisms behind many of the known comorbidities. All the information can be explored on a large scale and in detail at <a href="http://disease-perception.bsc.es/rgenexcom/">http://disease-perception.bsc.es/rgenexcom/</a>. 
+
 
 <!-- WEB APPLICATION -->
 ## Web Application: rgenexcom
@@ -64,6 +66,7 @@ rgenexcom has its own Github repository, where all the code is accessible.
 
 Link: <a href="https://github.com/bsc-life/rgenexcom">https://github.com/bsc-life/rgenexcom</a>.
 
+
 ## Frequently used terms
 - **Disease Similarity Network (DSN):** disease-disease network. Two diseases are connected if their gene expression profiles correlate significantly (positively or negatively).
 - **Meta-patients:** groups of patients from a given disease with a similar gene expression profile. 
@@ -71,6 +74,7 @@ Link: <a href="https://github.com/bsc-life/rgenexcom">https://github.com/bsc-lif
       (1) links between diseases
       (2) links between diseases and meta-patients
       (3) links between meta-patients.
+
 
 <!-- CODE -->
 ## Code
@@ -116,16 +120,6 @@ Inspecting the molecular mechanisms behind comorbidities (<code>exploring_underl
 
 ### Meta-patients increase the detection power
 Randomizations were performed to check the significance of the increase in the detection power achieved with the definition of meta-patients (<code>obtaining_random_meta_patients.R</code>, <code>DEA_random_metapatients.R</code>, <code>Network_building/build_metapatient_dis_network_randomization.py</code>, <code>Randomization/obtain_pvalues_increased_power_metapatients.R</code>)
-
-
-
-
-
-
-
-
-
-
 
 
 

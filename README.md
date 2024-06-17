@@ -53,7 +53,7 @@ Epidemiological evidence shows that some diseases tend to co-occur; more exactly
 #### rgenexcom (RNA-seq Gene Expression Comorbidities)
 Link: <a href="http://disease-perception.bsc.es/rgenexcom/">http://disease-perception.bsc.es/rgenexcom/</a>.
 
-![Captura de pantalla 2021-07-29 a las 17 20 21](https://user-images.githubusercontent.com/46993728/127519898-c808ac1c-34f7-4f2c-b266-3fdd1f5853cb.png)
+![image](https://github.com/bsc-life/rgenexcom/assets/46993728/5f43d446-fcfc-45e1-897d-64dea50095bc)
 
 
 ### Description

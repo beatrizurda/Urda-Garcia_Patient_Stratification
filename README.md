@@ -46,6 +46,9 @@ Preprint available in medRxiv at <a href="https://https://doi.org/10.1101/2021.0
 ### Abstract
 Epidemiological evidence shows that some diseases tend to co-occur; more exactly, certain groups of patients with a given disease are at a higher risk of developing a specific secondary condition. Here we develop a new approach to generate a disease network that uses the accumulating RNA-seq data on human diseases to significantly match an unprecedented proportion of known comorbidities, providing plausible biological models for such co-occurrences and effectively mirroring the underlying structure of complex disease relationships. Furthermore, 64% of the known disease pairs can be explained by analyzing groups of patients with similar expression profiles, highlighting the importance of patient stratification in the study of comorbidities. These results solidly support the existence of molecular mechanisms behind many of the known comorbidities, with most captured co-occurrences implicating the immune system.  Additionally, we identified new and potentially underdiagnosed comorbidities, providing molecular insights that could inform targeted therapeutic strategies. We provide a functional and comprehensive web application to explore diseases, disease co-occurrences and their underlying molecular processes at different resolution levels at <a href="http://disease-perception.bsc.es/rgenexcom/">http://disease-perception.bsc.es/rgenexcom/</a>. 
 
+[Graphical_abstract.pdf](https://github.com/user-attachments/files/20439582/Graphical_abstract.pdf)
+
+
 
 <!-- WEB APPLICATION -->
 ## Web Application: rgenexcom
